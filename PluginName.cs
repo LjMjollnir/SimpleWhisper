@@ -68,7 +68,7 @@ namespace LjMjollnir
                 {
                     i++;
                     if (i == 1) continue;
-                    Message = Message + s;
+                    Message = Message +" "+ s;
                 }
             }
             UnturnedChat.Say(Target, String.Format("From:{0} {1}", plyr.CharacterName, Message), UnityEngine.Color.magenta);
@@ -101,7 +101,7 @@ namespace LjMjollnir
             if (Target == null) { Logger.Log("Reply Unexpected Error"); return; }// Some unexpected Error
             foreach (var s in para)
             {
-                Message = Message + s;
+                Message = Message +" "+ s;
             }
             UnturnedChat.Say(Target, String.Format("From:{0} {1}", plyr.DisplayName, Message), UnityEngine.Color.magenta);
             UnturnedChat.Say(plyr, String.Format("To:{0} {1}", Target.DisplayName, Message), UnityEngine.Color.magenta);
